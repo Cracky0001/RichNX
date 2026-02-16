@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>SwitchDCActivity</AssemblyName>
+    <Product>SwitchDCActivity</Product>
+    <Title>SwitchDCActivity</Title>
+    <ApplicationIcon>S2DCRPC.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="S2DCRPC.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Nintendo-switch-icon.ico" />
+  </ItemGroup>
+
+</Project>

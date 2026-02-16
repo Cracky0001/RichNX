@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mirco\\Desktop\\Switch-DCRPC\\windows-client\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED5FC6E4-4C9E-4035-B144-C48CB746CC4B}|src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj|c:\\users\\mirco\\desktop\\switch-dcrpc\\windows-client\\src\\switchdcrpc.wpf\\switchdcrpc.wpf.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{ED5FC6E4-4C9E-4035-B144-C48CB746CC4B}|src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj|solutionrelative:src\\switchdcrpc.wpf\\switchdcrpc.wpf.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED5FC6E4-4C9E-4035-B144-C48CB746CC4B}|src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj|c:\\users\\mirco\\desktop\\switch-dcrpc\\windows-client\\src\\switchdcrpc.wpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED5FC6E4-4C9E-4035-B144-C48CB746CC4B}|src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj|solutionrelative:src\\switchdcrpc.wpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mirco\\AppData\\Local\\Temp\\.vsdbgsrc\\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SwitchDcrpc.Wpf",
+              "DocumentMoniker": "C:\\Users\\mirco\\Desktop\\Switch-DCRPC\\windows-client\\src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
+              "RelativeDocumentMoniker": "src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
+              "ToolTip": "C:\\Users\\mirco\\Desktop\\Switch-DCRPC\\windows-client\\src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
+              "RelativeToolTip": "src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-16T06:37:45.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\mirco\\Desktop\\Switch-DCRPC\\windows-client\\src\\SwitchDcrpc.Wpf\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "src\\SwitchDcrpc.Wpf\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\mirco\\Desktop\\Switch-DCRPC\\windows-client\\src\\SwitchDcrpc.Wpf\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "src\\SwitchDcrpc.Wpf\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T05:03:06.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PropertyPathWorker.cs",
+              "DocumentMoniker": "C:\\Users\\mirco\\AppData\\Local\\Temp\\.vsdbgsrc\\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\\PropertyPathWorker.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\\PropertyPathWorker.cs",
+              "ToolTip": "C:\\Users\\mirco\\AppData\\Local\\Temp\\.vsdbgsrc\\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\\PropertyPathWorker.cs",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\91b8eab688dba73dc7b179fffb2179670850a52b1cbbd82a2b0536ca94116ea9\\PropertyPathWorker.cs",
+              "ViewState": "AgIAAIQEAAAAAAAAAAAYwJ4EAAAEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T09:27:50.881Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "TitleDbPack": "DE.de.json",
+  "RpcName": "Playing on Switch",
+  "SwitchIp": "YourSwitchIP",
+  "Port": "6000",
+  "PollIntervalMs": "2000"
+}
