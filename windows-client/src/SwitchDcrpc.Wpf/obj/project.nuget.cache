@@ -1,23 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fRFjNN+PyT0=",
+  "dgSpecHash": "/TRGLUvs76Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\windows-client\\src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\.dotnet-home\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.3\\microsoft.net.illink.tasks.10.0.3.nupkg.sha512",
-    "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\.dotnet-home\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.3\\microsoft.netcore.app.runtime.win-x64.10.0.3.nupkg.sha512",
-    "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\.dotnet-home\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.3\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.3.nupkg.sha512",
-    "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\.dotnet-home\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.3\\microsoft.aspnetcore.app.runtime.win-x64.10.0.3.nupkg.sha512"
-  ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Fehler beim Abrufen von Paketsicherheitsrisikodaten: Der Dienstindex für die Quelle \"https://api.nuget.org/v3/index.json\" konnte nicht geladen werden.",
-      "projectPath": "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\windows-client\\src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\mirco\\Documents\\GitHub\\SwitchDCActivity\\windows-client\\src\\SwitchDcrpc.Wpf\\SwitchDcrpc.Wpf.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "expectedPackageFiles": [],
+  "logs": []
 }
