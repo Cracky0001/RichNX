@@ -84,7 +84,7 @@ namespace SwitchDcrpc.Wpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SwitchDCActivity;component/settingswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/RichNX;component/settingswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\SettingsWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

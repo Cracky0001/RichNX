@@ -351,7 +351,7 @@ void telemetry_build_json(TelemetryState* state, char* out, size_t out_size) {
         out,
         out_size,
         "{"
-        "\"service\":\"SwitchDCActivity\","
+        "\"service\":\"RichNX\","
         "\"firmware\":\"%s\","
         "\"active_program_id\":\"0x%016llX\","
         "\"active_game\":\"%s\","

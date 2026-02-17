@@ -31,7 +31,7 @@ public sealed class TitleDbPackStore
     public TitleDbPackStore()
     {
         _http = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
-        _http.DefaultRequestHeaders.UserAgent.ParseAdd("SwitchDCActivity/1.0 (+titledb)");
+        _http.DefaultRequestHeaders.UserAgent.ParseAdd("RichNX/1.0 (+titledb)");
     }
 
     public IReadOnlyList<string> Packs => DefaultPacks;

@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("SwitchDCActivity")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("RichNX")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a3d32a0f6868decdb7600df8f72e743acd6b38e")]
-[assembly: System.Reflection.AssemblyProductAttribute("SwitchDCActivity")]
-[assembly: System.Reflection.AssemblyTitleAttribute("SwitchDCActivity")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7da534c50a2f77edc59d4677e210b1cbb5a00122")]
+[assembly: System.Reflection.AssemblyProductAttribute("RichNX")]
+[assembly: System.Reflection.AssemblyTitleAttribute("RichNX")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -1,4 +1,4 @@
-﻿# Switch-DCRPC
+﻿# RichNX
 
 Komplettlösung für Discord Rich Presence auf der Nintendo Switch.
 
@@ -7,7 +7,7 @@ Komplettlösung für Discord Rich Presence auf der Nintendo Switch.
 Das Projekt besteht aus zwei Teilen:
 
 1. **Switch-Sysmodule** (liefert Telemetrie als HTTP-JSON)
-2. **Windows-Client (SwitchDCActivity)** (pollt `/state` und setzt Discord RPC)
+2. **Windows-Client (RichNX)** (pollt `/state` und setzt Discord RPC)
 
 ---
 
@@ -16,7 +16,7 @@ Das Projekt besteht aus zwei Teilen:
 - [Projektaufbau](#projektaufbau)
 - [End-to-End Datenfluss](#end-to-end-datenfluss)
 - [Switch-Sysmodule](#switch-sysmodule)
-- [Windows-Client (SwitchDCActivity)](#windows-client-switchdcactivity)
+- [Windows-Client (RichNX)](#windows-client-richnx)
 - [Build & Publish](#build--publish)
 - [Troubleshooting](#troubleshooting)
 - [Author & Repository](#author--repository)
@@ -51,7 +51,7 @@ Beispiel (`/state`):
 
 ```json
 {
-  "service": "switch_dcrpc_idle",
+  "service": "RichNX",
   "firmware": "21.2.0",
   "active_program_id": "0x01006F8002326000",
   "active_game": "Animal Crossing New Horizons",
@@ -68,7 +68,7 @@ Beispiel (`/state`):
 
 ---
 
-## Windows-Client (SwitchDCActivity)
+## Windows-Client (RichNX)
 
 ### Features
 
@@ -121,7 +121,7 @@ Zusätzlich:
 - Minimieren versteckt das Fenster im Tray
 - Klick auf `X` beendet nicht sofort, sondern versteckt in den Tray
 - beim Verstecken über `X` erscheint ein Hinweis:
-  - `SwitchDCActivity is still running`
+  - `RichNX is still running`
 - Tray-Menü:
   - `Open`
   - `Exit`
@@ -154,7 +154,7 @@ Zusätzlich:
 Wenn aktiviert, schreibt der Client:
 
 - Key: `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
-- Value-Name: `SwitchDCActivity`
+- Value-Name: `RichNX`
 - Value: Pfad zur EXE
 
 Hinweis: nur `HKCU` (kein `HKLM`, keine Admin-Rechte erforderlich).
@@ -177,7 +177,7 @@ dotnet publish .\windows-client\src\SwitchDcrpc.Wpf\SwitchDcrpc.Wpf.csproj -c Re
 
 Ausgabe:
 
-- `windows-client/dist/win-x64/SwitchDCActivity.exe`
+- `windows-client/dist/win-x64/RichNX.exe`
 
 ---
 
@@ -199,10 +199,12 @@ Ausgabe:
 ## Author & Repository
 
 - Author: **Cracky**
-- Repository: https://github.com/Cracky0001/SwitchDCActivity
+- Repository: https://github.com/Cracky0001/RichNX
 
 ---
 
 ## Lizenz
 
 GPL-3.0 license
+
+

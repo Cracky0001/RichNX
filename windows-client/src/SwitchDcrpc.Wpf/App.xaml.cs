@@ -8,8 +8,8 @@ namespace SwitchDcrpc.Wpf;
 
 public partial class App : System.Windows.Application
 {
-    private const string SingleInstanceMutexName = "Local\\SwitchDcrpc_Wpf_SingleInstance";
-    private const string ActivatePipeName = "SwitchDcrpc_Wpf_Activate";
+    private const string SingleInstanceMutexName = "Local\\RichNX_Wpf_SingleInstance";
+    private const string ActivatePipeName = "RichNX_Wpf_Activate";
 
     private Mutex? _singleInstanceMutex;
     private CancellationTokenSource? _activationListenerCts;

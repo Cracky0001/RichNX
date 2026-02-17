@@ -13,7 +13,7 @@ namespace SwitchDcrpc.Wpf;
 public partial class MainWindow : Window
 {
     private const string AutoStartRunKeyPath = @"Software\Microsoft\Windows\CurrentVersion\Run";
-    private const string AutoStartValueName = "SwitchDCActivity";
+    private const string AutoStartValueName = "RichNX";
 
     private readonly NotifyIcon _trayIcon;
     private readonly ClientConfigStore _configStore = new();
@@ -82,7 +82,7 @@ public partial class MainWindow : Window
 
         var icon = new NotifyIcon
         {
-            Text = "Switch DCRPC",
+            Text = "RichNX",
             Icon = appIcon,
             Visible = true,
             ContextMenuStrip = new ContextMenuStrip()
@@ -148,7 +148,7 @@ public partial class MainWindow : Window
         try
         {
             _trayIcon.BalloonTipIcon = ToolTipIcon.Info;
-            _trayIcon.BalloonTipTitle = "SwitchDCActivity is still running";
+            _trayIcon.BalloonTipTitle = "RichNX is still running";
             _trayIcon.BalloonTipText = "The app is running in the background. Use the tray icon to reopen or exit.";
             _trayIcon.ShowBalloonTip(4000);
         }

@@ -7,7 +7,7 @@ namespace SwitchDcrpc.Wpf;
 
 public partial class AboutWindow : Window
 {
-    private const string RepoUrl = "https://github.com/Cracky0001/SwitchDCActivity";
+    private const string RepoUrl = "https://github.com/Cracky0001/RichNX";
 
     public AboutWindow()
     {

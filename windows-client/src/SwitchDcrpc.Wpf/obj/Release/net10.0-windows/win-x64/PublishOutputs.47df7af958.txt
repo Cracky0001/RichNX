@@ -1,2 +1,2 @@
 C:\Users\mirco\Documents\GitHub\SwitchDCActivity\dist\windows-client\standalone-win-x64\Nintendo-switch-icon.png
-C:\Users\mirco\Documents\GitHub\SwitchDCActivity\dist\windows-client\standalone-win-x64\SwitchDCActivity.exe
+C:\Users\mirco\Documents\GitHub\SwitchDCActivity\dist\windows-client\standalone-win-x64\RichNX.exe

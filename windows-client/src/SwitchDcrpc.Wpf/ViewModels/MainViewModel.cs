@@ -16,7 +16,7 @@ public sealed class MainViewModel : ObservableObject
     private const string DefaultPollIntervalMs = "2000";
     private const string DefaultRpcName = "Playing on Switch";
     private const string DefaultTitleDbPack = "DE.de.json";
-    private const string GithubRepoUrl = "https://github.com/Cracky0001/SwitchDCActivity";
+    private const string GithubRepoUrl = "https://github.com/Cracky0001/RichNX";
     private const string GithubButtonLabel = "Download from GitHub";
     private static readonly TimeSpan StateUnreachableClearDelay = TimeSpan.FromSeconds(10);
     private string _switchIp = DefaultSwitchIp;

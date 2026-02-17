@@ -10,6 +10,7 @@ public sealed class TitleListStore
 {
     private readonly string _path;
     private readonly string _legacyPath;
+    private readonly string _legacyPathOldBrand;
     private readonly SemaphoreSlim _gate = new(1, 1);
     private readonly Dictionary<ulong, string> _map = new();
     private DateTime _lastLoadedUtc;
@@ -26,6 +27,12 @@ public sealed class TitleListStore
         // Older builds stored the file in LocalAppData. Migrate once if present.
         _legacyPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+            "RichNX",
+            "Titles.txt"
+        );
+
+        _legacyPathOldBrand = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
             "SwitchDCActivity",
             "Titles.txt"
         );
@@ -41,11 +48,12 @@ public sealed class TitleListStore
             _map.Clear();
             Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
 
-            if (!File.Exists(_path) && File.Exists(_legacyPath))
+            if (!File.Exists(_path) && (File.Exists(_legacyPath) || File.Exists(_legacyPathOldBrand)))
             {
                 try
                 {
-                    File.Copy(_legacyPath, _path, overwrite: true);
+                    var source = File.Exists(_legacyPath) ? _legacyPath : _legacyPathOldBrand;
+                    File.Copy(source, _path, overwrite: true);
                 }
                 catch
                 {

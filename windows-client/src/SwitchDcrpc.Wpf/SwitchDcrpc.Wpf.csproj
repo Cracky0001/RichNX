@@ -7,9 +7,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>SwitchDCActivity</AssemblyName>
-    <Product>SwitchDCActivity</Product>
-    <Title>SwitchDCActivity</Title>
+    <AssemblyName>RichNX</AssemblyName>
+    <Product>RichNX</Product>
+    <Title>RichNX</Title>
     <ApplicationIcon>Nintendo-switch-icon.ico</ApplicationIcon>
   </PropertyGroup>
 
