@@ -5,14 +5,18 @@ using System.Text;
 namespace SwitchDcrpc.Wpf.Services;
 
 // Simple local mapping: one line per title id.
-// Format: <hexTitleId>:<optionalName>
+// Formats:
+// - <hexTitleId>:<optionalName>
+// - <hexTitleId>:<optionalName>:<optionalIconUrl>
 public sealed class TitleListStore
 {
+    public readonly record struct TitleOverride(string Name, string? IconUrl);
+
     private readonly string _path;
     private readonly string _legacyPath;
     private readonly string _legacyPathOldBrand;
     private readonly SemaphoreSlim _gate = new(1, 1);
-    private readonly Dictionary<ulong, string> _map = new();
+    private readonly Dictionary<ulong, TitleOverride> _map = new();
     private DateTime _lastLoadedUtc;
     private DateTime _lastSeenWriteUtc;
 
@@ -63,7 +67,7 @@ public sealed class TitleListStore
 
             if (!File.Exists(_path))
             {
-                await File.WriteAllTextAsync(_path, "# TitleID:Name\n", Encoding.UTF8, cancellationToken);
+                await File.WriteAllTextAsync(_path, "# TitleID:Name[:IconUrl]\n", Encoding.UTF8, cancellationToken);
                 _lastSeenWriteUtc = File.GetLastWriteTimeUtc(_path);
                 _lastLoadedUtc = DateTime.UtcNow;
                 return;
@@ -79,22 +83,14 @@ public sealed class TitleListStore
                     continue;
                 }
 
-                var idx = line.IndexOf(':');
-                if (idx <= 0)
-                {
-                    continue;
-                }
-
-                var idText = line[..idx].Trim();
-                var name = line[(idx + 1)..].Trim();
-                if (!TryParseTitleId(idText, out var tid))
+                if (!TryParseLine(line, out var tid, out var entry))
                 {
                     continue;
                 }
 
                 if (!_map.ContainsKey(tid))
                 {
-                    _map[tid] = name;
+                    _map[tid] = entry;
                 }
             }
             _lastLoadedUtc = DateTime.UtcNow;
@@ -105,7 +101,7 @@ public sealed class TitleListStore
         }
     }
 
-    public async Task<(bool found, string name)> ResolveOrAddMissingAsync(ulong titleId, CancellationToken cancellationToken)
+    public async Task<(bool found, string name, string? iconUrl)> ResolveOrAddMissingAsync(ulong titleId, CancellationToken cancellationToken)
     {
         await _gate.WaitAsync(cancellationToken);
         try
@@ -132,19 +128,68 @@ public sealed class TitleListStore
             {
                 // "found" means the TitleID exists in the list (even if the user hasn't filled the name yet).
                 // An empty name should still allow higher-level fallbacks (e.g. titledb) to run.
-                return (true, existing);
+                return (true, existing.Name, existing.IconUrl);
             }
 
-            _map[titleId] = string.Empty;
+            _map[titleId] = new TitleOverride(string.Empty, null);
             Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
             await File.AppendAllTextAsync(_path, $"{titleId:X16}:\n", Encoding.UTF8, cancellationToken);
             _lastSeenWriteUtc = File.GetLastWriteTimeUtc(_path);
-            return (false, string.Empty);
+            return (false, string.Empty, null);
         }
         finally
         {
             _gate.Release();
         }
+    }
+
+    private static bool TryParseLine(string line, out ulong tid, out TitleOverride entry)
+    {
+        tid = 0;
+        entry = default;
+
+        var firstColon = line.IndexOf(':');
+        if (firstColon <= 0)
+        {
+            return false;
+        }
+
+        var idText = line[..firstColon].Trim();
+        if (!TryParseTitleId(idText, out tid))
+        {
+            return false;
+        }
+
+        var rest = line[(firstColon + 1)..].Trim();
+        if (rest.Length == 0)
+        {
+            entry = new TitleOverride(string.Empty, null);
+            return true;
+        }
+
+        var iconSplit = IndexOfIconSeparator(rest);
+        if (iconSplit < 0)
+        {
+            entry = new TitleOverride(rest, null);
+            return true;
+        }
+
+        var name = rest[..iconSplit].Trim();
+        var iconUrl = rest[(iconSplit + 1)..].Trim();
+        entry = new TitleOverride(name, string.IsNullOrWhiteSpace(iconUrl) ? null : iconUrl);
+        return true;
+    }
+
+    private static int IndexOfIconSeparator(string text)
+    {
+        var http = text.IndexOf(":http://", StringComparison.OrdinalIgnoreCase);
+        if (http >= 0)
+        {
+            return http;
+        }
+
+        var https = text.IndexOf(":https://", StringComparison.OrdinalIgnoreCase);
+        return https;
     }
 
     private static bool TryParseTitleId(string text, out ulong titleId)

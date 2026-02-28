@@ -447,7 +447,7 @@ public sealed class MainViewModel : ObservableObject
             try { await _titlesTask; } catch { /* ignore */ }
         }
 
-        var (found, name) = await _titles.ResolveOrAddMissingAsync(tid, cancellationToken);
+        var (found, name, localIconUrl) = await _titles.ResolveOrAddMissingAsync(tid, cancellationToken);
         if (!found)
         {
             if (tid != _lastMissingLoggedTid)
@@ -458,8 +458,9 @@ public sealed class MainViewModel : ObservableObject
             return new ResolvedTitle(game, null);
         }
 
-        string? iconUrl = null;
-        if (_titledb.TryGetIconUrl(tid, out var u) && !string.IsNullOrWhiteSpace(u))
+        // Prefer explicit icon URL from Titles.txt, then fall back to TitleDB.
+        var iconUrl = string.IsNullOrWhiteSpace(localIconUrl) ? null : localIconUrl.Trim();
+        if (iconUrl is null && _titledb.TryGetIconUrl(tid, out var u) && !string.IsNullOrWhiteSpace(u))
         {
             iconUrl = u;
         }

@@ -1,5 +1,23 @@
-/.dotnet-home
-/build
-/dist
-/windows-client/src/SwitchDcrpc.Wpf/bin
+# Build output
+/build/
+/dist/
+/.publish-tmp/
+/.dotnet-home/
+[Bb]in/
+[Oo]bj/
+
+# IDE / editor
+/.vs/
+/.vscode/
+/.idea/
+*.suo
+*.user
+*.userosscache
+*.rsuser
+*.sln.docstates
+
+# Tooling caches / symbols
 *.cache
+*.pdb
+/windows-client/src/SwitchDcrpc.Wpf/obj
+windows-client/src/SwitchDcrpc.Wpf/obj/Debug/net10.0-windows/apphost.exe

@@ -1,2 +1,0 @@
-C:\Users\mirco\Documents\GitHub\SwitchDCActivity\dist\windows-client\standalone-win-x64-docked\Nintendo-switch-icon.png
-C:\Users\mirco\Documents\GitHub\SwitchDCActivity\dist\windows-client\standalone-win-x64-docked\SwitchDCActivity.exe
